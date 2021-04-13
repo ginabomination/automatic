@@ -7,223 +7,46 @@
     <title>Databases/Index/Home</title>
 </head>
 <body>
-  <h1>Marist Sports Day</h1>
-  <h2>Query</h2>
-    <p>
-    </p>
-          <div class="dropdown">
-            <button class="dropbtn">Houses</button>
-            <div class="dropdown-content">
-              <a href="query2">Champagnat</a>
-              <a href="query3">Colin</a>
-              <a href="query4">Chanel</a>
-              <a href="chavoin">Chavoin</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">Competative/Noncompetative</button>
-            <div class="dropdown-content">
-              <a href="nocompetative">Noncompetative</a>
-              <a href="competative">Competative</a>
-              <a href="rholders">Record Holders</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">Sport Category</button>
-            <div class="dropdown-content">
-              <a href="track">Track</a>
-              <a href="field">Field</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">Sport Activities by Age Group</button>
-            <div class="dropdown-content">
-          <a href="g7">Year 7</a>
-          <a href="g8">Year 8</a>
-          <a href="g9">Year 9</a>
-          <a href="g10">Year 10</a>
-          <a href="g11">Year 11</a>
-          <a href="g12">Year 12</a>
-          <a href="g13">Year 13</a>
-        </div>
-          </div>
-          <p>
-          </p>
-<div class="dropdown">
-            <button class="dropbtn">Houses Points by House</button>
-            <div class="dropdown-content">
-              <a href="champagant">Champagnat</a>
-              <a href="colin">Colin</a>
-              <a href="chanel">Chanel</a>
-              <a href="chavon">Chavoin</a>
-            </div>
-          </div>
-              <div class="dropdown">
-                <button class="dropbtn">Houses Points by Age Group</button>
-                <div class="dropdown-content">
-              <a href="y7">Year 7</a>
-              <a href="y8">Year 8</a>
-              <a href="y9">Year 9</a>
-              <a href="y10">Year 10</a>
-              <a href="y11">Year 11</a>
-              <a href="y12">Year 12</a>
-              <a href="y13">Year 13</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">Houses Points by Sport Categories</button>
-            <div class="dropdown-content">
-          <a href="trackhp">Track</a>
-          <a href="fieldhp">Field</a>
-        </div>
-      </div>
-<h2>Student Entries</h2>
-  <h3>Non-Competative</h3>
+  <h1>Automated Irrigation</h1>
+  
+<h2>Option Settings</h2>
+  <h3>Custom Options</h3>
     <form action="/names" method="POST">
-        <input type="text" placeholder="First Name" name="Firstname">
-        <input type="text" placeholder="Full Name" name="Fullname">
-        <input type="text" placeholder="Tutor Group" name="Tutorgroup">
-        <input hidden type="text" placeholder="Year" name="Year">
-        <p>
-        </p>
-        <input hidden type="text" placeholder="Year" name="Year">
-        <label for="Year">Year</label>
-        <select placeholder="Year" name="Year" >
-          <option value="-"></option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-        </select>
-        <input hidden placeholder="House" name="House">
-        <label for="House">House</label>
-        <select type="text" placeholder="House" name="House" >
-          <option value="-"></option>
-          <option value="Chanel">Chanel</option>
-          <option value="Chavoin">Chavoin</option>
-          <option value="Colin">Colin</option>
-          <option value="Champagnat">Champagnat</option>
-        </select>
-        <input hidden type="text" placeholder="Points" name="Points">
-        <label for="Points">Points [By Completion]</label>
-        <select placeholder="Points" name="Points" >
-          <option value="-"></option>
-          <option value="1">Once</option>
-          <option value="2">Twice</option>
-          <option value="3">Three Times</option>
-          <option value="4">Four Times</option>
-          <option value="5">Five Times</option>
-          <option value="6">Six Times</option>
-        </select>
-        <p>
-        </p>
-        <input hidden type="text" placeholder="Sport Category" name="Sportcategory">
-        <label for="Sportcategory">Sport Category</label>
-        <select type="Sportcategory" placeholder="Sportcategory" name="Sportcategory" >
-          <option value="-"></option>
-          <option value="Track">Track</option>
-          <option value="Field">Field</option>
-        </select>
-        <input hidden type="text" placeholder="Sport" name="Sport">
-        <label for="Sport">Sport</label>
-        <select type="Sport" placeholder="Sport" name="Sport" >
-          <option value="-"></option>
-          <option value="100m">100m</option>
-          <option value="Shotput">Shotput</option>
-          <option value="Highjump">Highjump</option>
-          <option value="Longjump">Longjump</option>
-        </select>
-        <label hidden for="Record">Competative</label>
-        <select hidden type="Record" placeholder="Record" name="Record" >
-          <option hidden value="noncompetative">No</option>
-        </select>
-        <p>
-        </p>
+        <input type="text" placeholder="Water Moisture Requirement" name="Firstname">
+        <input type="text" placeholder="Water Pump Duration" name="Fullname">
         <button type="submit">Submit</button>
       </form>
 
-      <h3>Competative</h3>
+      <h3>Preset Options</h3>
       <form action="/names" method="POST">
-        <input type="text" placeholder="First Name" name="Firstname">
-        <input type="text" placeholder="Full Name" name="Fullname">
-        <input type="text" placeholder="Tutor Group" name="Tutorgroup">
-        <p>
-        </p>
-        <input hidden type="text" placeholder="Year" name="Year">
-        <label for="Year">Year</label>
-        <select placeholder="Year" name="Year" >
+  
+        <input hidden type="text" placeholder="Water Pump Duration" name="Year">
+        <label for="Year">Water Pump Duration</label>
+        <select placeholder="Water Pump Duration" name="Year" >
           <option value="-"></option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
+          <option value="7">Succulents</option>
+          <option value="8">Troplical</option>
+          <option value="9">Herbs</option>
+          <option value="10">Catus</option>
+          <option value="11">Houseplant</option>
+          <option value="12">Outside Equatoral</option>
+          <option value="13">Outside Central</option>
+          <option value="14">Outside Poletral</option>
         </select>
-        <input hidden placeholder="House" name="House">
-        <label for="House">House</label>
-        <select type="text" placeholder="House" name="House" >
+        <input hidden type="text" placeholder="Water Moisture Requirement" name="Year">
+        <label for="Year">Water Moisture Requirement</label>
+        <select placeholder="Water Moisture Requirement" name="Year" >
           <option value="-"></option>
-          <option value="Chanel">Chanel</option>
-          <option value="Chavoin">Chavoin</option>
-          <option value="Colin">Colin</option>
-          <option value="Champagnat">Champagnat</option>
+          <option value="7">Succulents</option>
+          <option value="8">Troplical</option>
+          <option value="9">Herbs</option>
+          <option value="10">Catus</option>
+          <option value="11">Houseplant</option>
+          <option value="12">Outside Equatoral</option>
+          <option value="13">Outside Central</option>
+          <option value="14">Outside Poletral</option>
         </select>
-        <input hidden type="text" placeholder="Points" name="Points">
-        <label for="Points">Points [By Record Placing]</label>
-        <select placeholder="Points" name="Points" >
-          <option value="-"></option>
-          <option value="8">1st</option>
-          <option value="7">2nd</option>
-          <option value="6">3rd</option>
-          <option value="5">4th</option>
-          <option value="4">5th</option>
-          <option value="3">6th</option>
-          <option value="2">7th</option>
-          <option value="1">8th</option>
-        </select>
-        <p>
-        </p>
-        <input hidden type="text" placeholder="Sport Category" name="Sportcategory">
-        <label for="Sportcategorygy">Sport Category</label>
-        <select type="Sportcategory" placeholder="Sportcaterogy" name="Sportcategory" >
-          <option value="-"></option>
-          <option value="Track">Track</option>
-          <option value="Field">Field</option>
-        </select>
-        <input hidden type="text" placeholder="Sport" name="Sport">
-        <label for="Sport">Sport</label>
-        <select type="Sport" placeholder="Sport" name="Sport" >
-          <option value="-"></option>
-          <option value="500m">500m</option>
-          <option value="1km">1km</option>
-          <option value="Shotput">Shotput</option>
-          <option value="Highjump">Highjump</option>
-          <option value="Longjump">Longjump</option>
-        </select>
-        <label hidden for="Record">Competative</label>
-          <select hidden type="Record" placeholder="Record" name="Record">
-            <option hidden value="competative">Yes</option>
-        </select>
-        <input hidden type="text" placeholder="Placing" name="Placing">
-        <label for="Placing">Placing</label>
-        <select placeholder="Placing" name="Placing" >
-          <option value="-"></option>
-          <option value="1st">1st</option>
-          <option value="2nd">2nd</option>
-          <option value="3rd">3rd</option>
-          <option value="4th">4th</option>
-          <option value="5th">5th</option>
-          <option value="6th">6th</option>
-          <option value="7th">7th</option>
-          <option value="8th">8th</option>
-        </select>
-        <p>
-        </p>
+
         <button type="submit">Submit</button>
       </form>
 </body>
