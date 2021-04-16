@@ -18,9 +18,10 @@
 
       <h3>Preset Options</h3>
       <form action="/names" method="POST">
-  
-        <input hidden type="text" placeholder="Water Pump Duration" name="Year">
         <label for="Year">Water Pump Duration</label>
+        <p>
+
+        </p>
         <select placeholder="Water Pump Duration" name="Year" >
           <option value="-"></option>
           <option value="7">Succulents</option>
@@ -32,8 +33,13 @@
           <option value="13">Outside Central</option>
           <option value="14">Outside Poletral</option>
         </select>
-        <input hidden type="text" placeholder="Water Moisture Requirement" style="text-align:middle"name="Year">
+       <p>
+
+       </p>
         <label for="Year">Water Moisture Requirement</label>
+        <p>
+
+        </p>
         <select placeholder="Water Moisture Requirement" name="Year" >
           <option value="-"></option>
           <option value="7">Succulents</option>
@@ -47,7 +53,7 @@
         </select>
 
         <button class="button" type="submit">Submit</button>
-      </form>
+     </form>
 </body>
 
       <ul hidden class="names">
@@ -73,6 +79,23 @@
           </li>
         <% } %>
       </ul>
+      <style>
+        input[type=text], select {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
 
         </head>
       </head>
