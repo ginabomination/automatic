@@ -13,30 +13,14 @@
     <form action="/names" method="POST">
         <input type="text" placeholder="Water Moisture Requirement" name="Firstname">
         <input type="text" placeholder="Water Pump Duration" name="Fullname">
-        <button class="button" type="submit">Submit</button>
+        <p>
+
+        </p>
+        <button class="button" type="submit"><span>Submit</span></button>
       </form>
 
       <h3>Preset Options</h3>
       <form action="/names" method="POST">
-        <label for="Year">Water Pump Duration</label>
-        <p>
-
-        </p>
-        <select placeholder="Water Pump Duration" name="Year" >
-          <option value="-"></option>
-          <option value="7">Succulents</option>
-          <option value="8">Troplical</option>
-          <option value="9">Herbs</option>
-          <option value="10">Catus</option>
-          <option value="11">Houseplant</option>
-          <option value="12">Outside Equatoral</option>
-          <option value="13">Outside Central</option>
-          <option value="14">Outside Poletral</option>
-        </select>
-       <p>
-
-       </p>
-        <label for="Year">Water Moisture Requirement</label>
         <p>
 
         </p>
@@ -51,8 +35,10 @@
           <option value="13">Outside Central</option>
           <option value="14">Outside Poletral</option>
         </select>
+<p>
 
-        <button class="button" type="submit">Submit</button>
+</p>
+        <button class="button" type="submit"><span>Submit</span></button>
      </form>
 </body>
 
@@ -86,7 +72,7 @@
           margin: 8px 0;
           display: inline-block;
           border: 1px solid #ccc;
-          border-radius: 4px;
+          border-radius: 20px;
           box-sizing: border-box;
         }
         
@@ -95,6 +81,47 @@
           background-color: #f2f2f2;
           padding: 20px;
         }
+
+        .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
         </style>
 
         </head>
