@@ -12,7 +12,7 @@ app.listen(3000, function() {
   })
  
 
-  MongoClient.connect('mongodb+srv://ginags:2tripleX@2021.1ora2.mongodb.net/test', {
+  MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', {
   useUnifiedTopology: true
 }, (err, client) => {
     const db = client.db('Sustain')
