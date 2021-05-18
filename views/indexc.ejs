@@ -10,8 +10,8 @@
 <h2>Option Settings</h2>
   <h3>Custom Options</h3>
     <form action="/Moisture" method="POST">
-        <input type="text" placeholder="Water Moisture Requirement" name="Firstname">
-        <input type="text" placeholder="Water Pump Duration" name="Fullname">
+        <input type="text" placeholder="Water Moisture Requirement" name="soil">
+        <input type="text" placeholder="Water Pump Duration" name="pump">
         <p>
 
         </p>
@@ -23,7 +23,19 @@
         <p>
 
         </p>
-        <select placeholder="Water Moisture Requirement" name="Year" >
+        <select placeholder="Water Moisture Requirement" name="soil">
+          <option value="-"></option>
+          <option value="7">Succulents</option>
+          <option value="8">Troplical</option>
+          <option value="9">Herbs</option>
+          <option value="10">Catus</option>
+          <option value="11">Houseplant</option>
+          <option value="12">Outside Equatoral</option>
+          <option value="13">Outside Central</option>
+          <option value="14">Outside Poletral</option>
+        </select>
+        
+        <select placeholder="Water Pump Duration" name="pump" >
           <option value="-"></option>
           <option value="7">Succulents</option>
           <option value="8">Troplical</option>
