@@ -10,7 +10,7 @@
 <h2>Option Settings</h2>
   <h3>Custom Options</h3>
 
-  <!--Custom entry form start-->
+  <!--text input POST 1 start-->
     <form action="/Moisture" method="POST">
         <input type="text" placeholder="Water Moisture Requirement" name="soil">
         <input type="text" placeholder="Water Pump Duration" name="pump">
@@ -18,16 +18,11 @@
 
         </p>
         <button class="button" type="submit"><span>Submit</span></button>
-      </form><!--Custom entry form finish-->
+      </form> <!--text input POST 1 end-->
 
-<!--Preset entry form start-->
+ <!--text input POST 2 start-->
       <h3>Preset Options</h3>
-     <form>
-    <button id="sbutton">Su</button>
-   ><!--Preset entry form finish--> 
-   <h2>Preset</h2>
-
-   <form name="myForm" action="/Moisture" method="POST">
+   <form action="/Moisture" method="POST" id="myForm">
      <input type="text"name="pump"><br><br>
      <input type="text" name="soil"><br><br>
      <input type="button" onclick="formSubmit()" value="Send form data!">
@@ -36,7 +31,7 @@
        function formSubmit() {
            document.forms["myForm"].submit();
        }
-       </script>
+       </script> <!--text input POST 2 end-->
 </form>
 
 </body>
