@@ -25,16 +25,20 @@
      <form>
     <button id="sbutton">Su</button>
    ><!--Preset entry form finish--> 
-    <form id="myForm" action="/Moisture" method="POST">
-  <input type="text">
-  <button onclick="formSubmit()">Submit</button>
+   <h2>Preset</h2>
+
+   <form name="myForm" action="/Moisture" method="POST">
+     <input type="text"name="pump"><br><br>
+     <input type="text" name="soil"><br><br>
+     <input type="button" onclick="formSubmit()" value="Send form data!">
+     <script>
+       const myForm = document.querySelector("#myForm");
+       function formSubmit() {
+           document.forms["myForm"].submit();
+       }
+       </script>
 </form>
-<script>
-const myForm = document.querySelector("#myForm");
-function formSubmit() {
-    document.forms["myForm"].submit();
-}
-</script>
+
 </body>
 
       <ul hidden class="Moisture">
