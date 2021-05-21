@@ -24,24 +24,13 @@
       <h3>Preset Options</h3>
      <form>
     <button id="sbutton">Su</button>
-    <script>
-    const Array = ["10", "20", 5, "40"];
-    const sbuttton = document.querySelector("#sbutton");
-
-    app.post("/Moisture", (req, res) => {
-      pump.value = quoteArray[2];
-      soil.value = quoteArray[2];
-        })
-          </script>
-    </form><!--Preset entry form finish--> 
-    <form name="myForm" action="/action_page.php" method="get">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="button" onclick="formSubmit()" value="Send form data!">
+   ><!--Preset entry form finish--> 
+    <form id="myForm" action="/Moisture" method="POST">
+  <input type="text">
+  <button onclick="formSubmit()">Submit</button>
 </form>
 <script>
+const myForm = document.querySelector("#myForm");
 function formSubmit() {
     document.forms["myForm"].submit();
 }
