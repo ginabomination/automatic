@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <title>Databases/Index/Home</title>
 </head>
-<script src="dropdown.js"></script>
 <body>
   <h1>Automated Irrigation</h1>
 <h2>Option Settings</h2>
   <h3>Custom Options</h3>
+
+  <!--Custom entry form start-->
     <form action="/Moisture" method="POST">
         <input type="text" placeholder="Water Moisture Requirement" name="soil">
         <input type="text" placeholder="Water Pump Duration" name="pump">
@@ -17,7 +18,7 @@
 
         </p>
         <button class="button" type="submit"><span>Submit</span></button>
-      </form>
+      </form><!--Custom entry form finish-->
 
       <h3>Preset Options</h3>
       <form action="/Moisture" method="POST">
@@ -58,29 +59,17 @@
      
      
      
-     <form action="/Moisture" method="POST">
-      
-    <button id="sbutton">fdvdfv</button>
+     <form>
+    <button id="sbutton">S</button>
     <script>
     const arry = ["10", "20", 5, "40"];
     const sbuttton = document.querySelector("#sbutton");
 
-
-    app.post("/action", (req, res) => {
-var userData = {
-    username: req.body.username,
-    password: req.body.password
-}
-
-sbutton.onclick = app.post("/action", (req, res) => {
- var userData = {
-    soil.value = quoteArray[2];
-    pump: req.body,7;}
-
-      sbutton.onclick = function sresponse() {
+sbutton.onclick = function(){
+    app.post("/Moisture", (req, res) => {
       pump.value = quoteArray[2];
       soil.value = quoteArray[2];
-        } 
+        })}
           </script>
     </form>
 

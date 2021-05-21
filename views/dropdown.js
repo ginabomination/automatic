@@ -8,3 +8,14 @@ sbutton.onclick = function sresponse() {
   method.POST(pump.value = quoteArray[2]);
   console.log(soil.value = quoteArray[2]);
   } 
+
+  
+
+  app.post("/action", (req, res) => {
+    var userData = {
+        username: req.body.username,
+        password: req.body.password,
+    }
+
+
+  })
