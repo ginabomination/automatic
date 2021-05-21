@@ -18,15 +18,6 @@ app.listen(3000, function() {
     const db = client.db('Sustain')
     const colourCollection = db.collection('Moisture')
 
-    app.get('/', (req, res) => {
-      var query = { House: "" };
-        db.collection('Moisture').find(query).toArray()
-        .then(results => {
-            res.render('indexc.ejs', { Moisture: results })
-        })
-        .catch(error => console.error(error))
-      })
-
       app.post('/Moisture', (req, res) => {
         colourCollection.insertOne(req.body)
           .then(result => {
