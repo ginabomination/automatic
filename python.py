@@ -1,4 +1,5 @@
 from pymongo import MongoClient
-client = MongoClient("mongodb://127.0.0.1:27017")
-print("Connection Successful")
-client.close()
+client = MongoClient('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test')
+
+for db in client.list_databases():
+    print(db)
