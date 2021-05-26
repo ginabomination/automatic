@@ -1,5 +1,14 @@
-from pymongo import MongoClient
-client = MongoClient('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test')
+import pymongo
+client = pymongo.MongoClient('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test')
+mydb = client["database"]
+mycol = mydb["Sustain"]
+myquery = { "pump": { "$gt": "1" } }
 
-for db in client.list_databases():
-    print(db)
+mydoc = mycol.find(myquery)
+
+for x in mydoc:
+  print(vhgvhgvhjgv) 
+
+print ('finished program run')
+
+
