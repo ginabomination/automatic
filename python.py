@@ -1,14 +1,7 @@
 import pymongo
 client = pymongo.MongoClient('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test')
-mydb = client["database"]
-mycol = mydb["Sustain"]
-myquery = { "pump": { "$gt": "1" } }
+for db_info in client.list_database_names():
 
-mydoc = mycol.find(myquery)
-
-for x in mydoc:
-  print(vhgvhgvhjgv) 
-
-print ('finished program run')
+   print(db_info)
 
 
