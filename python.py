@@ -5,4 +5,14 @@ if "Sustain" in dblist:
   print("Sustain exists.")
 
 db = client["Sustain"]
-print(db.list_collection_names())
+collist = db.list_collection_names()
+if "Moisture" in collist:
+  print("Moisture exists.")
+
+
+col = db["Moisture"]
+
+
+x = col.find_one()
+
+print(x) 
