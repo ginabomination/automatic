@@ -18,6 +18,14 @@ app.listen(3000, function() {
     const db = client.db('Sustain')
     const colourCollection = db.collection('Moisture')
 
+    app.get('/', (req, res) => {});
+        db.collection('Moisture').find().toArray()
+        .then(results => {
+            res.render('index.ejs', { Moisture: results })
+        })
+        .catch(error => console.error(error))
+      })
+
       app.post('/Moisture', (req, res) => {
         colourCollection.insertOne(req.body)
           .then(result => {
@@ -28,4 +36,3 @@ app.listen(3000, function() {
       })
   if (err) return console.error(err)
   console.log('Connected to Database')
-})
