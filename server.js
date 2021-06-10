@@ -18,8 +18,9 @@ app.listen(3000, function() {
     const db = client.db('Sustain')
     const colourCollection = db.collection('Moisture')
 
-    app.get('/', (req, res) => {});
-        db.collection('Moisture').find().toArray()
+    app.get('/', (req, res) => {
+      var query = { House: "" };
+        db.collection('Moisture').find(query).toArray()
         .then(results => {
             res.render('index.ejs', { Moisture: results })
         })
@@ -36,3 +37,4 @@ app.listen(3000, function() {
       })
   if (err) return console.error(err)
   console.log('Connected to Database')
+})

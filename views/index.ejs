@@ -10,30 +10,41 @@
 <h2>Option Settings</h2>
   <h3>Custom Options</h3>
 
-  <!--text input POST 1 start-->
+  <!--Custom entry form start-->
     <form action="/Moisture" method="POST">
         <input type="text" placeholder="Water Moisture Requirement" name="soil">
         <input type="text" placeholder="Water Pump Duration" name="pump">
         <p>
 
         </p>
+        <select placeholder="Water Moisture Requirement" name="soil" >
+          <option value="-"></option>
+          <option value="7">Succulents</option>
+          <option value="8">Troplical</option>
+          <option value="9">Herbs</option>
+          <option value="10">Catus</option>
+          <option value="11">Houseplant</option>
+          <option value="12">Outside Equatoral</option>
+          <option value="13">Outside Central</option>
+          <option value="14">Outside Poletral</option>
+        </select>
+        <select placeholder="Water Moisture Requirement" name="pump" >
+          <option value="-"></option>
+          <option value="7">Succulents</option>
+          <option value="8">Troplical</option>
+          <option value="9">Herbs</option>
+          <option value="10">Catus</option>
+          <option value="11">Houseplant</option>
+          <option value="12">Outside Equatoral</option>
+          <option value="13">Outside Central</option>
+          <option value="14">Outside Poletral</option>
+        </select>
         <button class="button" type="submit"><span>Submit</span></button>
-      </form> <!--text input POST 1 end-->
+      </form><!--Custom entry form finish-->
 
- <!--text input POST 2 start-->
-      <h3>Preset Options</h3>
-   <form action="/Moisture" method="POST" id="myForm">
-     <input type="text"name="pump"><br><br>
-     <input type="text" name="soil"><br><br>
-     <input type="button" onclick="formSubmit()" value="Send form data!">
-     <script>
-       const myForm = document.querySelector("#myForm");
-       function formSubmit() {
-           document.forms["myForm"].submit();
-       }
-       </script> <!--text input POST 2 end-->
-</form>
+<!--Preset entry form start-->
 
+</script>
 </body>
 
       <ul hidden class="Moisture">
@@ -61,20 +72,12 @@
           border-radius: 20px;
           box-sizing: border-box;
         }
-        html { 
-          background: url(photo1.jpg) no-repeat center center fixed; 
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-}
         
         div {
           border-radius: 5px;
           background-color: #f2f2f2;
           padding: 20px;
         }
-
         .button {
   display: inline-block;
   border-radius: 4px;
@@ -90,14 +93,12 @@
   margin: 5px;
   border-radius: 50px;
 }
-
 .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -106,11 +107,9 @@
   right: -20px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 25px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
