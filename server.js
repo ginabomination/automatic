@@ -18,24 +18,14 @@ app.listen(3000, function() {
     const db = client.db('Sustain')
     const colourCollection = db.collection('Moisture')
 
-
-      app.post('/Moisture', (req, res) => {
-        colourCollection.insertOne(req.body)
+    app.post('/Moisture', (req, res) => {
+        colourCollection.updateOne(req.body)
           .then(result => {
             console.log(result)
             res.redirect('/')
           })
           .catch(error => console.error(error))
       })
- 
-        var input = { soil: "Company Inc", pump: "Highway 37" };
-        client.Moisture().insertOne(input, function(err, res) {
-          if (err) throw err;
-          console.log("1 document inserted");
-          client.close();
-        });
-      });
   if (err) return console.error(err)
   console.log('Connected to Database')
-
-
+})
