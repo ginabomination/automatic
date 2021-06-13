@@ -14,18 +14,18 @@ app.listen(3000, function() {
 
   MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', {
   useUnifiedTopology: true
-}, (err, client) => {
+}, (erro, client) => {
     const db = client.db('Sustain')
-    const colourCollection = db.collection('Moisture')
-
-    app.post('/Moisture', (req, res) => {
-        colourCollection.updateOne(req.body)
+    const Collection = db.collection('Moisture')
+       app.post('Moisture', (req, res) => {
+        Collection.updateOne(req.body)
           .then(result => {
             console.log(result)
-            res.redirect('/')
+            res.redirect()
+            res.render('index.ejs')
           })
           .catch(error => console.error(error))
       })
-  if (err) return console.error(err)
+  if (erro) return console.error(erro)
   console.log('Connected to Database')
 })
