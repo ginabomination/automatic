@@ -11,7 +11,7 @@
   <h3>Custom Options</h3>
 
   <!--Custom entry form start-->
- <form action="Moisture" method="POST"> 
+ <form action="'/Moisture'" method="POST"> 
         <input type="text" placeholder="Water Moisture Requirement" name="soil">
         <input type="text" placeholder="Water Pump Duration" name="pump">
         <!--Custom entry form finish-->
@@ -19,7 +19,7 @@
       </form>
 </body>
 
-      <ul hidden class="Moisture">
+      <ul>
         <!-- Loop through quotes -->
         <% for(var i = 0; i < Moisture.length; i++) {%>
           <li class="soil">
