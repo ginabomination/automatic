@@ -16,7 +16,8 @@ app.listen(3000, function() {
   useUnifiedTopology: true
 }, (err, client) => {
   app.get('/', (res) => {
-    res.render('index.ejs')
+    app.set('views',path.join(auto+'/views/'));
+    res.render('index.ejs');
   })
   const db = client.db('Sustain')
     const Collection = db.collection('/Moisture')
