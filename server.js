@@ -15,7 +15,10 @@ app.listen(3000, function() {
   MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', {
   useUnifiedTopology: true
 }, (err, client) => {
-    const db = client.db('Sustain')
+  app.get('/', (res) => {
+    res.render('index.ejs')
+  })
+  const db = client.db('Sustain')
     const Collection = db.collection('/Moisture')
        app.post('/Moisture', (req, res) => {
         Collection.updateOne(req.body)
@@ -27,6 +30,4 @@ app.listen(3000, function() {
           if (err) return console.errr(err)
   console.log('Connected to Database')
       })
-      app.get('/', (req, res) => {
-        res.render('index.ejs')
-      })})
+    })
