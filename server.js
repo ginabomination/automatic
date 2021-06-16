@@ -4,9 +4,7 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient
 
 app.set('view engine', 'ejs')
-
 app.use(bodyParser.urlencoded({ extended: true }))
-
 app.listen(3000, function() {
     console.log('listening on 3000')
   })
@@ -15,22 +13,26 @@ app.listen(3000, function() {
   MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', {
   useUnifiedTopology: true
 }, (err, client) => {
-  app.get('/', (req, res) => {
-    const db = client.db('Sustain')
-    
-    db.collection('Moisture').find().toArray()
-    .then(results => { res.render('index.ejs',{ Moisture: results})})
-   ;
-  })
+  const db = client.db('Sustain')
   const Collection = db.collection('Moisture')
-       app.post('/Moisture', (req, res) => {
+  app.get('/', (req, res) => {
+    db.collection('Moisture').find().toArray()
+    .then(results => { 
+      res.render('index.ejs',{ Moisture: results})
+})
+.catch(error => console.error(error))
+  })
+  
+  app.post('Moisture', (req, res) => {
         Collection.updateOne(req.body)
           .then(result => {
             console.log(result)
             res.redirect('/')
           })
-          .catch(err => console.err(err))
-          if (err) return console.err(err)
-  console.log('Connected to Database')
+          .catch(error => console.error(error))
       })
-    })
+  if (err) return console.error(err)
+  console.log('Connected to Database')
+})
+
+  
