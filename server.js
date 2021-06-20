@@ -20,12 +20,12 @@ app.listen(3000, function() {
   app.get('/', (req, res) => {
     db.collection('Moisture').find().toArray()
     .then(results => { 
-      res.render('index.ejs',{ Moisture: results})
+      res.render('index.ejs', results)
 })
 .catch(error => console.error(error))
   })
   
-  app.post('Moisture', (req, res) => {
+  app.post('/Moisture', (req, res) => {
         Collection.updateOne(req.body)
           .then(result => {
             console.log(result)
