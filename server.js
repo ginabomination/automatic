@@ -26,7 +26,7 @@ app.listen(3000, function() {
   })
   
   app.post('/Moisture', (req, res) => {
-        Collection.UpdateOne(req.body)
+        Collection.findOneAndUpdate(req.body)
           .then(result => {
             console.log(result)
             res.redirect('/')
