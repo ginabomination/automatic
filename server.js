@@ -10,7 +10,7 @@ app.listen(3000, function() {
   })
        
 
-  MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', function(err, db) {
+  MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', {
   useUnifiedTopology: true
 }, (err, client) => {
   const db = client.db('Sustain')
@@ -26,20 +26,14 @@ app.listen(3000, function() {
   })
   
   app.post('/Moisture', (req, res) => {
-    if (err) throw err;
-    var myquery = { sort: "1" };
-    var newvalues = {$set: {pump: "00", soil: "00"}};
-    db.collection('Moisture').updateMany(myquery, newvalues, function(err, res) {
-      if (err) throw err;
-      console.log(res.result.nModified + "document updated");
-      res.redirect('/')
-      db.close();
-    }) .catch(error => console.error(error));        
+    db.collection.update({sort: 1 },{$set:{pump:"is this working"}})
+          .then(result => {
+            console.log(result)
+            res.redirect('/')
+          })
+          .catch(error => console.error(error))
       })
-
-    
-        
-
+      
 
       if (err) return console.error(err)
   console.log('Connected to Database')
