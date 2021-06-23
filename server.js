@@ -26,15 +26,14 @@ app.listen(3000, function() {
   })
   
   app.post('/Moisture', (req, res) => {
-    db.collection.update({sort: 1 },{$set:{pump:"is this working"}})
+        Collection.updateMany({sort:{ $gt: "1" }}, { $set: { pump: "00", soil: "00"}})
+
           .then(result => {
             console.log(result)
             res.redirect('/')
           })
           .catch(error => console.error(error))
       })
-      
-
       if (err) return console.error(err)
   console.log('Connected to Database')
 })
