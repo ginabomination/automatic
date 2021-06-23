@@ -26,7 +26,12 @@ app.listen(3000, function() {
   })
   
   app.post('/Moisture', (req, res) => {
-        Collection.findOneAndUpdate(req.body)
+              Collection.updateMany(
+          {sort:{ $gt: "1" }},
+          { $set: { pump: req.body, soil: req.body}}
+        )
+
+
           .then(result => {
             console.log(result)
             res.redirect('/')
