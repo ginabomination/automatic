@@ -26,7 +26,7 @@ app.listen(3000, function() {
   })
   
   app.post('/Moisture', (req, res) => {
-        Collection.update({sort:{ $gt: 1 }}, { $set: { pump: 1}})
+        Collection.update({sort:{ $gt: "1" }}, { $set: { pump: req.body, soil: req.body}})
 
           .then(result => {
             console.log(result)
