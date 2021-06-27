@@ -16,6 +16,13 @@ app.listen(3000, function() {
   const db = client.db('Sustain')
   const Collection = db.collection('Moisture')
   
+  app.get('/custom', (req, res) => {
+      db.collection('Moisture').find().toArray()
+      .then(results => {
+          res.render('custom.ejs', results)
+      })
+      .catch(error => console.error(error))
+    }) 
   
   app.get('/', (req, res) => {
     db.collection('Moisture').find().toArray()
