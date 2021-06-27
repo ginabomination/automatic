@@ -14,15 +14,7 @@ app.listen(3000, function() {
   useUnifiedTopology: true
 }, (err, client) => {
   const db = client.db('Sustain')
-  const Collection = db.collection('Moisture')
-  
-  app.get('/custom', (req, res) => {
-      db.collection('Moisture').find().toArray()
-      .then(results => {
-          res.render('custom.ejs', results)
-      })
-      .catch(error => console.error(error))
-    }) 
+  const Collection = db.collection('Moisture') 
   
   app.get('/', (req, res) => {
     db.collection('Moisture').find().toArray()
