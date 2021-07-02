@@ -29,7 +29,6 @@ MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/te
   var newvalues = { $set: { pump: "3", soil: "7"}};
   const Collection = db.collection("Moisture");
   Collection.updateMany(myquery, newvalues)
-  console.log(res.result.nModified + " document updated")
 
           .then(result => {
             console.log(result)
