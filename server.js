@@ -11,14 +11,28 @@ app.listen(3000, function() {
   
   var url = "mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test";
   
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, function(err, client) {
     if (err) throw err;
-    var dbo = db.db("Sustain");
-    var myquery = { sort: "1" };
+    var dbo = client.db("Sustain");
+    var query = { sort: "1" };
     var newvalues = { $set: {soil:  '3', pump: "3" } };
-    dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
+   
+  app.get('/', (req, res) => {
+    db.collection('Moisture').find().toArray()
+    .then(results => { 
+      res.render('index.ejs', results)
+})
+.catch(error => console.error(error))
+  })
+  
+  app.post('/Moisture', (req, res) => {
+    dbo.collection("Moisture").updateOne(query, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
-      db.close();
+      client.close();
     });
-  }); 
+          })
+          .catch(error => console.error(error))
+      });
+  if (err) return console.error(err)
+  console.log('Connected to Database')
