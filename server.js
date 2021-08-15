@@ -14,24 +14,21 @@ app.listen(3000, function() {
   MongoClient.connect(url, function(err, client) {
     if (err) throw err;
     var dbo = client.db("Sustain");
-    var query = { sort: "1" };
-    var newvalues = { $set: {soil:  '3', pump: "3" } };
    
-  app.get('/', () => {
+  app.get('/', (res) => {
     dbo.collection('Moisture').find().toArray()
     .then(results => { 
       res.render('index.ejs', results)
 })
 .catch(error => console.error(error))
   })
- MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("Sustain");
+ 
+    var dbo = client.db("Sustain");
     var myquery = { sort: "1" };
     var newvalues = { $set: {soil:  '3', pump: "3" } };
     dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
-      db.close();
+      client.close();
     });
-  }); });
+  }); 
