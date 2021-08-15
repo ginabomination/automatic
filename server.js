@@ -8,33 +8,17 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.listen(3000, function() {
     console.log('listening on 3000')
   })
-
-  MongoClient.connect('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test', {
-  useUnifiedTopology: true
-}, (err, client) => {
-  const db = client.db('Sustain')
-  const Collection = db.collection('Moisture') 
   
-  app.get('/', (req, res) => {
-    db.collection('Moisture').find().toArray()
-    .then(results => { 
-      res.render('index.ejs', results)
-})
-.catch(error => console.error(error))
-  })
+  var url = "mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test";
   
-  app.post('/Moisture', (req, res) => {
-    var myquery = { $gt: {sort: "e"}};
-    var newvalues = { $set: { pump: 3, soil: 7}};
-    db.collection("Moisture").updateOne(myquery, newvalues)
-
+  MongoClient.connect(url, function(err, db) {
     if (err) throw err;
-    console.log("1 document updated")
-
-          .then(result => { 
-            res.redirect('/')
-
-          .catch(error => console.error(error))
-      })
-      if (err) return console.error(err)
-  console.log('Connected to Database')})})
+    var dbo = db.db("Sustain");
+    var myquery = { sort: "1" };
+    var newvalues = { $set: {soil:  '3', pump: "3" } };
+    dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
+      if (err) throw err;
+      console.log("1 document updated");
+      db.close();
+    });
+  }); 
