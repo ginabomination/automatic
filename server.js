@@ -20,7 +20,7 @@ app.listen(3000, function() {
     .then(results => { 
       res.render('index.ejs', results)
 })
-.catch(error => console.error(error))
+.catch(error => console.error(error))  
   })
  
   app.post('/Moisture', (res) => {
