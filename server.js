@@ -18,20 +18,10 @@ app.listen(3000, function() {
     var newvalues = { $set: {soil:  '3', pump: "3" } };
    
   app.get('/', () => {
-    db.collection('Moisture').find().toArray()
+    dbo.collection('Moisture').find().toArray()
     .then(results => { 
       res.render('index.ejs', results)
 })
 .catch(error => console.error(error))
-  })
+  })});
   
-  app.post('/Moisture', () => {
-    dbo.collection("Moisture").updateOne(query, newvalues, function(err, res) {
-      if (err) throw err;
-      console.log("1 document updated");
-      client.close();
-    });
-          })
-          .catch(error => console.error(error))
-      });
-  console.log('Connected to Database')
