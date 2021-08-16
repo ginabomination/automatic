@@ -15,13 +15,9 @@ app.listen(3000, function() {
     if (err) throw err;
     var dbo = client.db("Sustain");
    
-  app.get('/', (res) => {
-    dbo.collection('Moisture').find().toArray()
-    .then(results => { 
-      res.render('index.ejs', results)
-})
-.catch(error => console.error(error))  
-  })
+    app.get('/', function (req, res) {
+      res.send(ejs.renderFile(collection + '/views/index.ejs'));
+    });
  
   app.post('/Moisture', (res) => {
     if (err) throw err;
