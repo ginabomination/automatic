@@ -28,10 +28,6 @@ app.listen(3000, function() {
       if (err) throw err;
       console.log("1 document updated");
       client.close();
-   
-    then(result => {
-    console.log(result)
-    res.redirect('/')
   })
   .catch(error => console.error(error))
 }); }); 
