@@ -14,11 +14,12 @@ app.listen(3000, function() {
   MongoClient.connect(url, function(err, client) {
     if (err) throw err;
     var dbo = client.db("Sustain");
-   
-    app.get('/', function (req, res) {
-      res.send(ejs.renderFile(collection + '/views/index.ejs'));
-    });
  
+    app.get('/', (req, res) =>{
+        res.render('index.ejs', results)
+  })
+  .catch(error => console.error(error))   
+  
   app.post('/Moisture', (res) => {
     if (err) throw err;
     var dbo = client.db("Sustain");
@@ -36,4 +37,4 @@ app.listen(3000, function() {
   .catch(error => console.error(error))
 }); }); 
 if (err) return console.error(err)
-console.log('Connected to Database') });
+console.log('Connected to Database')}) ;
