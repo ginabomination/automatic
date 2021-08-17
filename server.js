@@ -19,11 +19,11 @@ app.listen(3000, function() {
         res.render('index.ejs');
   }); 
   
-  app.post('/Moisture', (res) => {
+  app.post('/Moisture', (req, res) => {
     if (err) throw err;
     var dbo = client.db("Sustain");
     var myquery = { sort: "1" };
-    var newvalues = { $set: {soil:  7, pump: 8 } };
+    var newvalues = { $set: {soil:  (req.body), pump: (req.body) } };
     dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
