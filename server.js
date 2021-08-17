@@ -23,7 +23,7 @@ app.listen(3000, function() {
     if (err) throw err;
     var dbo = client.db("Sustain");
     var myquery = { sort: "1" };
-    var newvalues = { $set: {soil:  (req.body), pump: (req.body) } };
+    var newvalues = { $set: (req.body)};
     dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
