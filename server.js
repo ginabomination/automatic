@@ -16,9 +16,8 @@ app.listen(3000, function() {
     var dbo = client.db("Sustain");
  
     app.get('/', (req, res) =>{
-        res.render('index.ejs', results)
-  })
-  .catch(error => console.error(error))   
+        res.render('index.ejs');
+  }); 
   
   app.post('/Moisture', (res) => {
     if (err) throw err;
