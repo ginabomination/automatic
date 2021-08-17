@@ -23,13 +23,13 @@ app.listen(3000, function() {
     if (err) throw err;
     var dbo = client.db("Sustain");
     var myquery = { sort: "1" };
-    var newvalues = { $set: {soil:  5, pump: 5 } };
+    var newvalues = { $set: {soil:  7, pump: 8 } };
     dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
       client.close();
   })
   .catch(error => console.error(error))
-}); }); 
+}); 
 if (err) return console.error(err)
-console.log('Connected to Database')}) ;
+console.log('Connected to Database')}); 
