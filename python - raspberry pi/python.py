@@ -9,8 +9,9 @@ collist = db.list_collection_names()
 if "Moisture" in collist:
   print("Moisture exists.")
 print (collist)
-
 col = db["Moisture"]
-x = col.find_one()
-print(x)
+
+query = { "pump": ""}
+doc = col.find(query)
+print(doc)
 
