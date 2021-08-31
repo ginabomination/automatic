@@ -12,9 +12,9 @@ print ("{:>5}\t{:>5}".format("raw", "v"))
 
 while True
 
+def on_forever():
 if chan.voltage > 1.600
-  print ("met")
-  time.sleep(.5)
+  print ("met") #replace/insert function for pump to run here
+  time.sleep(18000) #sleep for 5 hrs
 else:
-  print ("not met")
-  time.sleep(.5)
+  time.sleep(18000)
