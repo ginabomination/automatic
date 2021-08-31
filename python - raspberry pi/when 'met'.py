@@ -12,9 +12,9 @@ print ("{:>5}\t{:>5}".format("raw", "v"))
 
 while True
 
-def on_forever():
-  if chan.voltage < 1.640:
-    print ("{:>5\t{:>5.3f".format(chan.value, chan.voltage)
-    time.sleep(0.5)
-  else:
-    print ("dfsgwrgwieujsfjikwheriutfhw4iue4hrt")
+if chan.voltage > 1.600
+  print ("met")
+  time.sleep(.5)
+else:
+  print ("not met")
+  time.sleep(.5)
