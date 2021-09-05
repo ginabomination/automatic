@@ -11,5 +11,7 @@ if "Moisture" in collist:
 print (collist)
 col = db["Moisture"]
 
-for x in col.find({},{ "sort": 0, "pump": 1, "soil": 0 }):
+for x in col.find():
   print(x) 
+
+
