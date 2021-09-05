@@ -5,5 +5,10 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-x = db.col.find( {"sort": 1}, { "soil": 1, "pump": 1 } )
+x = db.col.find( {}, { "soil": 1, "pump": 1 } )
 print(x)
+
+query = { "pump": "" };
+p = db.collection("Moisture").find(query).toArray()
+
+print(p)
