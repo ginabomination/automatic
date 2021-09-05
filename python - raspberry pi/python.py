@@ -5,4 +5,4 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-print(col.find("pump")) 
+print(col.find().sort("pump")) 
