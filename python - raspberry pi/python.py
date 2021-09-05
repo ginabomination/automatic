@@ -4,7 +4,5 @@ dblist = client.list_database_names()
 db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
-x = col.find({ "sort": 0, "soil": 1})
-print(x) 
 
-
+print(col.find("pump")) 
