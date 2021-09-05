@@ -11,7 +11,5 @@ if "Moisture" in collist:
 print (collist)
 col = db["Moisture"]
 
-query = { "pump": ""}
-doc = col.find(query)
-print(doc)
-
+for x in col.find({},{ "sort": 0, "pump": 1, "soil": 0 }):
+  print(x) 

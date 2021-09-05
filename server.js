@@ -28,8 +28,10 @@ app.listen(3000, function() {
       if (err) throw err;
       console.log("1 document updated");
       client.close();
-  })
-  .catch(error => console.error(error))
+  }) 
+  app.get('/', (req, res) =>{
+    res.render('index.ejs');
+}); 
 }); 
 if (err) return console.error(err)
 console.log('Connected to Database')}); 
