@@ -5,11 +5,10 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-cursor = db.col.find()
-
-def f(x):
-    return x['pump']
-
-t1 = soil()
-blackset = set(map(f, cursor))
-print(soil() - t1)
+cursor = col.find()
+print('Type of cursor:',type(cursor))
+list_cur = list(cursor)
+df = DataFrame(list_cur)
+print('Type of df:',type(df))
+print()
+print(df.head())
