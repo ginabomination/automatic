@@ -4,6 +4,13 @@ dblist = client.list_database_names()
 db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
-
-x = db.col.find({ "sort": "1" })
+query = { 'pump': "" };
+x = db.col.find(query)
+print(query)
 print(x)
+
+cur = col.find()  
+cur (x)
+for doc in cur:
+    print(doc)
+
