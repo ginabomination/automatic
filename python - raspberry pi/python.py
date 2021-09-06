@@ -11,3 +11,10 @@ print('Type of cursor:',type(cursor))
 list_cur = list(cursor)
 json_data = dumps(list_cur, indent = 2)
 print (json_data)
+
+x = db.col.find({ "pump": {}})
+print(x)
+jsta = dumps(x, indent = 2)
+print (jsta)
+
+db.students.find({ "sort": "1")
