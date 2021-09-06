@@ -5,5 +5,11 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-array = list(col.findOne())
-print(array)
+cursor = db.col.find()
+
+def f(x):
+    return x['pump']
+
+t1 = soil()
+blackset = set(map(f, cursor))
+print(soil() - t1)
