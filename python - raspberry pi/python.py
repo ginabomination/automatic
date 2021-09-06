@@ -14,7 +14,7 @@ print (json_data)
 
 x = db.col.find({ "pump": {}})
 print(x)
-jsta = dumps(x, indent = 2)
+jsta = db.col.find({ "sort": "1"})
 print (jsta)
 
-db.students.find({ "sort": "1")
+
