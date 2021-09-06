@@ -5,11 +5,5 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-cur = col.find()  
-for doc in cur:
-    print(doc)
-
-query = { 'pump': "" };
-x = db.col.find(query)
-print(query)
-print(x)
+array = list(col.findOne())
+print(array)
