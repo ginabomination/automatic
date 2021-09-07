@@ -6,17 +6,6 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-cursor = col.find()
-print('Type of cursor:',type(cursor))
-list_cur = list(cursor)
-json_data = dumps(list_cur, indent = 2)
-print (json_data)
-
-
-query = { "sort": "1" }
-doc = col.find(query)
-
-for x in doc:
+for x in col.find({},{ "_id": 0,"pump": 1}):
   print(x) 
-
 
