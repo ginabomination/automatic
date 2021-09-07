@@ -5,7 +5,16 @@ dblist = client.list_database_names()
 db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
-x = db.col.find()
-print(x)
+
+cursor = col.find()
+print('Type of cursor:',type(cursor))
+list_cur = list(cursor)
+json_data = dumps(list_cur, indent = 2)
+print (json_data)
+
+cursor = conn.cursor()
+cursor.execute('SELECT * FROM Moisture')
+result = cursor.fetchone()
+print(result)
 
 
