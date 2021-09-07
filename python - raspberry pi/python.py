@@ -6,8 +6,10 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-for x in col.find({},{ "_id": 0,"pump": 1}).forEach(function(document), {output.push(document.pump)}):
+for x in col.find({},{ "_id": 0,"pump": 1}):
   print(x)
+document = db.col.find_one({},{ "_id": 0,"pump": 1})
+print(document["pump"])
 
 
 
