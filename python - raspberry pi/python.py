@@ -12,9 +12,11 @@ list_cur = list(cursor)
 json_data = dumps(list_cur, indent = 2)
 print (json_data)
 
-cursor = conn.cursor()
-cursor.execute('SELECT * FROM Moisture')
-result = cursor.fetchone()
-print(result)
+
+query = { "sort": "1" }
+doc = col.find(query)
+
+for x in doc:
+  print(x) 
 
 
