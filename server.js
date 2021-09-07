@@ -22,8 +22,9 @@ app.listen(3000, function() {
   app.post('/Moisture', (req, res) => {
     if (err) throw err;
     var dbo = client.db("Sustain");
+    var myquery = { sort: "1" };
     var newvalues = { $set: (req.body)};
-    dbo.collection("Moisture").updateOne(newvalues, function(err, res) {
+    dbo.collection("Moisture").updateOne(myquery, newvalues, function(err, res) {
       if (err) throw err;
       console.log("1 document updated");
       client.close();
@@ -32,18 +33,5 @@ app.listen(3000, function() {
     res.render('index.ejs');
 }); 
 }); 
-app.post('/Time', (req, res) => {
-  if (err) throw err;
-  var dbo = client.db("Sustain");
-  var newvalues = { $set: (req.body)};
-  dbo.collection("Time").updateOne(newvalues, function(err, res) {
-    if (err) throw err;
-    console.log("1 document updated");
-    client.close();
-}) 
-app.get('/', (req, res) =>{
-  res.render('index.ejs');
-}); 
-});
 if (err) return console.error(err)
 console.log('Connected to Database')}); 
