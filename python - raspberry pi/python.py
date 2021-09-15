@@ -8,5 +8,5 @@ col = db["Moisture"]
 
 for x in col.find({},{ "_id": 0,"pump": 1}):
   print(x) 
-if x==6666:
+if x== "{'pump': '6666'}":
   print("dfbuwhbefhbw")
