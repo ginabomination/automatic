@@ -6,10 +6,8 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-res = db.col.find({},{"_id": 0,"pump": 1})
-result = []
-for each in res:
-    result.append(res['pump'])
-    print ()
+#for x in col.find({},{ "_id": 0,"pump": 1}):
+ # print(x) 
 
-
+for x in col.find():
+  print(x) 
