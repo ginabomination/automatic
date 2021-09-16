@@ -6,10 +6,12 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-for x in col.find():
-  print(x['pump'])
+for PlaceholderPump in col.find():
+  print ('pump:')
+  pump = (PlaceholderPump['pump'])
+  print (pump)
 
-for y in col.find():
-  print(y['soil'])
-  soil = (y['soil'])
+for PlaceholderSoil in col.find():
+  print ('soil:')
+  soil = (PlaceholderSoil['soil'])
   print (soil)
