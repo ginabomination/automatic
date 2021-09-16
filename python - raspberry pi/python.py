@@ -6,8 +6,5 @@ db = client["Sustain"]
 collist = db.list_collection_names()
 col = db["Moisture"]
 
-for x in col.find({},{ "_id": 0,"pump": 1}):
-  print(x)
-
-
-#{'pump': '6666'} ----> {'pump': 6666} as a result to print (x)
+for service in col.find({},{ "_id": 0,"pump": 1}):
+  print int(service['pump'])
