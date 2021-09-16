@@ -7,4 +7,6 @@ collist = db.list_collection_names()
 col = db["Moisture"]
 
 for service in col.find({},{ "_id": 0,"pump": 1}):
-  print int(service['pump'])
+  print(service['pump'])
+
+# from {'pump': 6666} -----> just 6666 as a result
