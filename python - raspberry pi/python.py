@@ -8,3 +8,8 @@ col = db["Moisture"]
 
 for x in col.find():
   print(x['pump'])
+
+for y in col.find():
+  print(y['soil'])
+  soil = (y['soil'])
+  print (soil)
