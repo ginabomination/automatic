@@ -1,88 +1,126 @@
-<!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" content="width=device-width, initial-scale=1">
     <title>Databases/Index/Home</title>
 </head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  height: 70%; 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 10px solid #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
 <body>
-  <h1>Automated Irrigation</h1>
-<form action="Moisture" method="POST"> 
-<p>
-</p>  
-  <label>Water Pump Duration</label>
-  <p>
-  </p>
-    <select name="soil">>
-      <option value="-"></option>
-      <option value="8">2</option>
-      <option value="9">3</option>
-      <option value="10">4</option>
-      <option value="11">5</option>
-      <option value="12">6</option>
-      <option value="13">7</option>
-    </select>
-<p>
-</p>  
-  <label>Water Moisture Requirement</label>   
-  <p>
-  </p>
-    <select name="pump">
-      <option value="-"></option>
-      <option value="8">2</option>
-      <option value="9">3</option>
-      <option value="10">4</option>
-      <option value="11">5</option>
-      <option value="12">6</option>
-      <option value="13">7</option>
-    </select>
-<p>
-  
-</p>
-  <section>
-    <button1 id="custom">Custom Options</button1>
-    <p>
-    </p>
-    <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
-    <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
-  </section>  
-      <script>
-      const hide = document.querySelector("#hide");
-      const hide2 = document.querySelector("#hide2");
-      const custom = document.querySelector("#custom");
-      
-      custom.addEventListener("click", Custom);
-      
-      function Custom (){
-        if (hide.style.display === "block") {
-            hide.style.display = "none";
-        } else {
-            hide.style.display = "block";
-        }
 
-        if (hide2.style.display === "block") {
-            hide2.style.display = "none";
-        } else {
-            hide2.style.display = "block";
-        }}
-      </script>
-  
-  <button class="button" type="submit"><span>Submit</span></button><!--submit form-->
+<div class="bg-text">
+	<body>
+        <body>
+            <h1>Automated Irrigation</h1>
+          <form action="Moisture" method="POST"> 
+          <p>
+          </p>  
+            <label>Water Pump Duration</label>
+            <p>
+            </p>
+              <select name="soil">>
+                <option value="-"></option>
+                <option value="8">2</option>
+                <option value="9">3</option>
+                <option value="10">4</option>
+                <option value="11">5</option>
+                <option value="12">6</option>
+                <option value="13">7</option>
+              </select>
+          <p>
+          </p>  
+            <label>Water Moisture Requirement</label>   
+            <p>
+            </p>
+              <select name="pump">
+                <option value="-"></option>
+                <option value="8">2</option>
+                <option value="9">3</option>
+                <option value="10">4</option>
+                <option value="11">5</option>
+                <option value="12">6</option>
+                <option value="13">7</option>
+              </select>
+          <p>
+            
+          </p>
+            <section>
+              <button1 id="custom">Custom Options</button1>
+              <p>
+              </p>
+              <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
+              <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
+            </section>  
+                <script>
+                const hide = document.querySelector("#hide");
+                const hide2 = document.querySelector("#hide2");
+                const custom = document.querySelector("#custom");
+                
+                custom.addEventListener("click", Custom);
+                
+                function Custom (){
+                  if (hide.style.display === "block") {
+                      hide.style.display = "none";
+                  } else {
+                      hide.style.display = "block";
+                  }
+          
+                  if (hide2.style.display === "block") {
+                      hide2.style.display = "none";
+                  } else {
+                      hide2.style.display = "block";
+                  }}
+                </script>
+            
+            <button class="button" type="submit"><span>Submit</span></button><!--submit form-->
+          
+          </form>
+          
+          
+    <style>
 
-</form>
-
-
-</body>
-
-      <!--CSS start-->
-      <style>
-        body {
+      body {
+        height: 100%;
           background-image: url("https://bn1304files.storage.live.com/y4m9Ws8y6QQPFVxhZLBehmLDZGrpYn_Ftivp7pzwLgnn1mw9F65H6p6lAPAqjdpC1ggF8Qa9QKK25qe9VcsGF13eap-ZWDYZ_oOI2OSbqG6aFMStffvJB3222sB8RJ6osw31nV2bgm5cLZb-S6ENavGwJKvE2Lac4SEBjfRiGRY_nD49-XsC6PiJ_-5VLMBShu4?width=4912&height=2333&cropmode=none");
           background-size: cover;
           color: #ffffff;
               }
       placeholder-shown{
-              background-color: white}
+              background-color: #ffffff}
 
         input[type=text], select {
           width: 50%;
@@ -95,7 +133,7 @@
         
         div {
           border-radius: 5px;
-          background-color: #f2f2f2;
+          background-color: #ffffff;
           padding: 20px;
         }
   .button {
@@ -153,8 +191,23 @@ button1:hover {
       color: #ffffff;
       border-radius: 10px;} 
       
-</style><!--CSS finish-->
-        
-        </head>
-      </head>
+      p {
+      font-size: 18px;
+      color: #ffffff;
+      }
+
+      p2 {
+      font-size: 14px;
+      color: #ffffff;
+      }
+
+      h1{
+      font-size: 40px;  
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: #ffffff;
+      }
+      </style>
+</div>
+
+</body>
 </html>
