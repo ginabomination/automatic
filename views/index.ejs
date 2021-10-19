@@ -83,19 +83,32 @@ body, html {
           </p>
           <form>
             <section>
-              <form id="change">
-                <button1 id="custom" type="button" onclick="hideOnClk(this.id)">Custom options</button1>
-                <button1 id="preset" type="button" class="hide" onclick="hideOnClk(this.id)">Preset Options</button1>
-            </form><script>
-              function hideOnClk(id){
-                if(id == "preset"){
-                  document.getElementById("custom").style.display="block";
-                  document.getElementById(id).style.display="none";
-                }else{
-                  document.getElementById("preset").style.display="block";
-                  document.getElementById(id).style.display="none";
+                <button id="custom" class="saveBtn">Save</button>
+                <script>const btn = document.getElementById("custom");
+
+
+              btn.onclick = function(){
+              console.log(btn.classList.value)
+                if (btn.classList.contains("saveBtn")){                  
+                  btn.classList.remove("saveBtn")
+                  btn.classList.add("btnUnsave")
+                  btn.innerText = "Unsave"
+                      if (hide.style.display === "block") {hide.style.display = "none";} else {hide.style.display = "block";}
+                      if (hide2.style.display === "block") {hide2.style.display = "none";} else {hide2.style.display = "block";}
+                      if (hide3.style.display === "block") {hide3.style.display = "none";} else {hide3.style.display = "block";}
+                      if (hide4.style.display === "none") {hide4.style.display = "block";} else {hide4.style.display = "none";}
+                      if (hide5.style.display === "none") {hide5.style.display = "block";} else {hide5.style.display = "none";}
+                      if (hide6.style.display === "none") {hide6.style.display = "block";} else {hide6.style.display = "none";}
+                      if (hide7.style.display === "none") {hide7.style.display = "block";} else {hide7.style.display = "none";}
+                      if (hide8.style.display === "none") {hide8.style.display = "block";} else {hide8.style.display = "none";}
+                      
+                        
+                } else {              
+                  btn.classList.add("saveBtn")
+                  btn.classList.remove("btnUnsave")
+                  btn.innerText = "Save"
                 }
-             } </script>
+              } </script>
               <p>
               </p>
               <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
