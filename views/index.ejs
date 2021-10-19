@@ -52,7 +52,7 @@ body, html {
             <label>Water Pump Duration</label>
             <p>
             </p>
-              <select name="soil">>
+              <select class="dropdown" name="soil">>
                 <option value="-"></option>
                 <option value="8">2</option>
                 <option value="9">3</option>
@@ -66,7 +66,7 @@ body, html {
             <label>Water Moisture Requirement</label>   
             <p>
             </p>
-              <select name="pump">
+              <select class="dropdown" name="pump">
                 <option value="-"></option>
                 <option value="8">2</option>
                 <option value="9">3</option>
@@ -123,12 +123,23 @@ body, html {
               background-color: #ffffff}
 
         input[type=text], select {
-          width: 50%;
+          width: 100%;
           padding: 12px 20px;
           margin: 8px 0;
           display: inline-block;
           border-radius: 20px;
           box-sizing: border-box;
+          text-align:center;
+        }
+
+        input[class=dropdown], select {
+          width: 70%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border-radius: 20px;
+          box-sizing: border-box;
+          text-align:left;
         }
         
         div {
