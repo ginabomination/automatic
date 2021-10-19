@@ -8,18 +8,31 @@
 <body>
   <h1>Automated Irrigation</h1>
 <h2>Option Settings</h2>
-  <h3>Custom Options</h3>
+  <form action="Moisture" method="POST"> 
+  <label for="pump">Pump</label>
+        <select placeholder="Water Pump Duration" name="pump">
+          <option value="-"></option>
+          <option value="7">1</option>
+          <option value="8">2</option>
+          <option value="9">3</option>
+          <option value="10">4</option>
+          <option value="11">5</option>
+          <option value="12">6</option>
+          <option value="13">7</option>
+        </select>
+        <label for="soil">Soil</label>
+        <select placeholder="Water Moisture Requirement" name="soil">
+          <option value="-"></option>
+          <option value="7">1</option>
+          <option value="8">2</option>
+          <option value="9">3</option>
+          <option value="10">4</option>
+          <option value="11">5</option>
+          <option value="12">6</option>
+          <option value="13">7</option>
+        </select>
 
-  <!--Custom entry form start-->
- <form action="Moisture" method="POST"> 
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown</button>
-    <div class="dropdown-content"></div>
-      <option value=””>option1</option>
-      <option value=””>option2</option>
-      <option value=””>option3</option>
-      <option value=””>option3</option>
-    </div>
+        <h3>Custom Options</h3>
         <input type="text" placeholder="Water Moisture Requirement [Voltage Resistance]" name="soil">
         <input type="text" placeholder="Water Pump Duration [Seconds]" name="pump">
         <!--Custom entry form finish-->
