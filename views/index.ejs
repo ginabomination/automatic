@@ -84,18 +84,9 @@ body, html {
           <form>
             <section>
               <form id="change">
-                <button1 id="custom" type="button" class="hide" onclick="hideOnClk(this.id)">Custom options</button1>
-                <button1 id="preset" type="button" onclick="hideOnClk(this.id)">Preset Options</button1>
+                <button1 id="custom" type="button" onclick="hideOnClk(this.id)">Custom options</button1>
+                <button1 id="preset" type="button" class="hide" onclick="hideOnClk(this.id)">Preset Options</button1>
             </form><script>
-                           const hide = document.querySelector("#hide");
-            const hide2 = document.querySelector("#hide2");
-            const hide3 = document.querySelector("#hide3");
-            const hide4 = document.querySelector("#hide4");
-            const hide5 = document.querySelector("#hide5");
-            const hide6 = document.querySelector("#hide6");
-            const hide7 = document.querySelector("#hide7");
-            const custom = document.querySelector("#custom");
-            
               function hideOnClk(id){
                 if(id == "preset"){
                   document.getElementById("custom").style.display="block";
@@ -104,8 +95,27 @@ body, html {
                   document.getElementById("preset").style.display="block";
                   document.getElementById(id).style.display="none";
                 }
-             } 
+             } </script>
+              <p>
+              </p>
+              <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
+              <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
+              <button id="hide3" class="button" type="submit"><span>Submit</span></button><!--submit form-->
+            </section>  
+            
+            <script>
+            const hide = document.querySelector("#hide");
+            const hide2 = document.querySelector("#hide2");
+            const hide3 = document.querySelector("#hide3");
+            const hide4 = document.querySelector("#hide4");
+            const hide5 = document.querySelector("#hide5");
+            const hide6 = document.querySelector("#hide6");
+            const hide7 = document.querySelector("#hide7");
+            const custom = document.querySelector("#custom");
+            const preset = document.querySelector("#custom");
+                            
             custom.addEventListener("click", Custom);
+            preset.addEventListener("click", Preset);
                             
             function Custom (){
              if (hide.style.display === "block") {hide.style.display = "none";} else {hide.style.display = "block";}
@@ -116,14 +126,18 @@ body, html {
              if (hide6.style.display === "none") {hide6.style.display = "block";} else {hide6.style.display = "none";}
              if (hide7.style.display === "none") {hide7.style.display = "block";} else {hide7.style.display = "none";}
              if (hide8.style.display === "none") {hide8.style.display = "block";} else {hide8.style.display = "none";}
-            }</script>
-              <p>
-              </p>
-              <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
-              <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
-              <button id="hide3" class="button" type="submit"><span>Submit</span></button><!--submit form-->
-            </section>  
-</form>
+            }
+            function Preset (){
+             if (hide.style.display === "none") {hide.style.display = "block";} else {hide.style.display = "none";}
+             if (hide2.style.display === "none") {hide2.style.display = "block";} else {hide2.style.display = "none";}
+             if (hide3.style.display === "none") {hide3.style.display = "block";} else {hide3.style.display = "none";}
+             if (hide4.style.display === "block") {hide4.style.display = "none";} else {hide4.style.display = "block";}
+             if (hide5.style.display === "block") {hide5.style.display = "none";} else {hide5.style.display = "block";}
+             if (hide6.style.display === "block") {hide6.style.display = "none";} else {hide6.style.display = "block";}
+             if (hide7.style.display === "block") {hide7.style.display = "none";} else {hide7.style.display = "block";}
+             if (hide8.style.display === "block") {hide8.style.display = "none";} else {hide8.style.display = "block";}
+            }
+             </script></form>
           
           
     <style>
