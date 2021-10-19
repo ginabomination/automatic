@@ -7,10 +7,12 @@
 </head>
 <body>
   <h1>Automated Irrigation</h1>
-<h2>Option Settings</h2>
 <form action="Moisture" method="POST"> 
 
   <label for="soil">Water Moisture Requirement</label>
+  <p>
+
+  </p>
     <select placeholder="Water Pump Duration" name="soil">
       <option value="-"></option>
       <option value="7">1</option>
@@ -23,8 +25,11 @@
     </select>
 <p>
 
-</p>
+</p>    
   <label for="pump">Water Pump Duration</label>
+  <p>
+
+  </p>
     <select placeholder="Water Moisture Requirement" name="pump">
       <option value="-"></option>
       <option value="7">1</option>
@@ -42,8 +47,8 @@
     <button1 id="custom">Custom Options</button1>
     <p>
     </p>
-    <input id="hide" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
-    <input id="hide2" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
+    <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
+    <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
   </section>  
       <script>
       const hide = document.querySelector("#hide");
