@@ -38,18 +38,19 @@
     <input id="hide" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
     <input id="hide" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
     <button1 id="custom">Custom Options</button1>
+  </section>  
+  
       <script>
       const hide = document.querySelector("#hide");
       const custom = document.querySelector("#custom");
       custom.addEventListener("click", Custom);
       function Custom (){
-        if (hide.style.display === "none") {
-            hide.style.display = "block";
-        } else {
+        if (hide.style.display === "block") {
             hide.style.display = "none";
+        } else {
+            hide.style.display = "block";
         }}
       </script>
-  </section>
   
   <button class="button" type="submit"><span>Submit</span></button><!--submit form-->
 
