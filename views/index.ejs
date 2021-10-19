@@ -49,10 +49,10 @@ body, html {
           <form action="Moisture" method="POST"> 
           <p>
           </p>  
-            <label>Water Pump Duration</label>
+            <label id="hide6" >Water Pump Duration</label>
             <p>
             </p>
-              <select class="dropdown" name="soil">>
+              <select id="hide4" class="dropdown" name="soil">>
                 <option></option>
                 <option value=8 >2</option>
                 <option value=9 >3</option>
@@ -63,10 +63,10 @@ body, html {
               </select>
           <p>
           </p>  
-            <label>Water Moisture Requirement</label>   
+            <label id="hide7" >Water Moisture Requirement</label>   
             <p>
             </p>
-              <select class="dropdown" name="pump">
+              <select id="hide5" class="dropdown" name="pump">
                 <option></option>
                 <option value=8 >2</option>
                 <option value=9 >3</option>
@@ -88,29 +88,10 @@ body, html {
               </p>
               <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
               <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
+              <button id="hide3" class="button" type="submit"><span>Submit</span></button><!--submit form-->
             </section>  
-                <script>
-                const hide = document.querySelector("#hide");
-                const hide2 = document.querySelector("#hide2");
-                const custom = document.querySelector("#custom");
-                
-                custom.addEventListener("click", Custom);
-                
-                function Custom (){
-                  if (hide.style.display === "block") {
-                      hide.style.display = "none";
-                  } else {
-                      hide.style.display = "block";
-                  }
-          
-                  if (hide2.style.display === "block") {
-                      hide2.style.display = "none";
-                  } else {
-                      hide2.style.display = "block";
-                  }}
-                </script>
             
-            <button class="button" type="submit"><span>Submit</span></button><!--submit form-->
+            
           
           </form>
           
