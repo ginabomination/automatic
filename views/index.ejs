@@ -8,13 +8,8 @@
 <body>
   <h1>Automated Irrigation</h1>
 <form action="Moisture" method="POST"> 
-
-  <label for="soil">Water Moisture Requirement</label>
-  <p>
-
-  </p>
     <select placeholder="Water Pump Duration" name="soil">
-      <option value="-"></option>
+      <option style="display:none;" value="-">Water Moisture Requirement</option>
       <option value="7">1</option>
       <option value="8">2</option>
       <option value="9">3</option>
@@ -26,12 +21,8 @@
 <p>
 
 </p>    
-  <label for="pump">Water Pump Duration</label>
-  <p>
-
-  </p>
     <select placeholder="Water Moisture Requirement" name="pump">
-      <option value="-"></option>
+      <option style="display:none;" value="-">Water Pump Duration</option>
       <option value="7">1</option>
       <option value="8">2</option>
       <option value="9">3</option>
