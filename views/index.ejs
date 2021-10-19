@@ -83,16 +83,11 @@ body, html {
           </p>
           <form>
             <section>
-              <button1 id="custom">Custom Options</button1>
-              <p>
-              </p>
-              <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
-              <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
-              <button id="hide3" class="button" type="submit"><span>Submit</span></button><!--submit form-->
-            </section>  
-            
-            <script>
-            const hide = document.querySelector("#hide");
+              <form id="change">
+                <button1 id="custom" type="button" class="hide" onclick="hideOnClk(this.id)">Custom options</button1>
+                <button1 id="preset" type="button" onclick="hideOnClk(this.id)">Preset Options</button1>
+            </form><script>
+                           const hide = document.querySelector("#hide");
             const hide2 = document.querySelector("#hide2");
             const hide3 = document.querySelector("#hide3");
             const hide4 = document.querySelector("#hide4");
@@ -100,7 +95,16 @@ body, html {
             const hide6 = document.querySelector("#hide6");
             const hide7 = document.querySelector("#hide7");
             const custom = document.querySelector("#custom");
-                            
+            
+              function hideOnClk(id){
+                if(id == "preset"){
+                  document.getElementById("custom").style.display="block";
+                  document.getElementById(id).style.display="none";
+                }else{
+                  document.getElementById("preset").style.display="block";
+                  document.getElementById(id).style.display="none";
+                }
+             } 
             custom.addEventListener("click", Custom);
                             
             function Custom (){
@@ -112,8 +116,14 @@ body, html {
              if (hide6.style.display === "none") {hide6.style.display = "block";} else {hide6.style.display = "none";}
              if (hide7.style.display === "none") {hide7.style.display = "block";} else {hide7.style.display = "none";}
              if (hide8.style.display === "none") {hide8.style.display = "block";} else {hide8.style.display = "none";}
-            }
-             </script></form>
+            }</script>
+              <p>
+              </p>
+              <input id="hide" style="display:none;" type="text" placeholder="Water Moisture Requirement [Voltage Resistance] e.g. 1.600" name="soil">
+              <input id="hide2" style="display:none;" type="text" placeholder="Water Pump Duration [Seconds] e.g. 6000" name="pump">
+              <button id="hide3" class="button" type="submit"><span>Submit</span></button><!--submit form-->
+            </section>  
+</form>
           
           
     <style>
