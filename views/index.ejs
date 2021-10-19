@@ -9,7 +9,9 @@
   <h1>Automated Irrigation</h1>
 <h2>Option Settings</h2>
 <form action="Moisture" method="POST"> 
-    <select placeholder="Water Pump Duration" name="pump">
+
+  <label for="soil">Water Moisture Requirement</label>
+    <select placeholder="Water Pump Duration" name="soil">
       <option value="-"></option>
       <option value="7">1</option>
       <option value="8">2</option>
@@ -19,7 +21,9 @@
       <option value="12">6</option>
       <option value="13">7</option>
     </select>
-    <select placeholder="Water Moisture Requirement" name="soil">
+
+  <label for="pump">Water Pump Duration</label>
+    <select placeholder="Water Moisture Requirement" name="pump">
       <option value="-"></option>
       <option value="7">1</option>
       <option value="8">2</option>
@@ -38,7 +42,9 @@
       const hide = document.querySelector("#hide");
       const hide2 = document.querySelector("#hide2");
       const custom = document.querySelector("#custom");
+      
       custom.addEventListener("click", Custom);
+      
       function Custom (){
         if (hide.style.display === "block") {
             hide.style.display = "none";
