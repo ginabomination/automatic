@@ -31,8 +31,10 @@ while count <= 10:
     for PlaceholderSoil in col.find():
         soil = (PlaceholderPump['soil'])
         print ('soil acquired =', soil)
-        
+    
+    time.sleep(3)
     soilF = float(soil)
+    print ('float =', soilF)
     
     if chan.voltage > soilF:
         GPIO.output(ledpin, GPIO.HIGH)
