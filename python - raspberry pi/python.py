@@ -28,21 +28,26 @@ for PlaceholderPump in col.find():
 for PlaceholderSoil in col.find():
     soil = (PlaceholderPump['soil'])
     print (soil)
-    
-print ("{:>5}\t{:>5}".format ("raw", "v"))
 
-f = float(soil)
-print ('Float Value =', f)
+soilF = float(soil)
+print ('Soil =', soilF)
+
+print ("{:>5}\t{:>5}".format ("raw", "v"))
 
 print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
 
 while True:
-    if chan.voltage > soil:
+    if chan.voltage > soilF:
         GPIO.output(ledpin, GPIO.HIGH)
         print ("pump on")
         time.sleep(pump)
         GPIO.output(ledpin, GPIO.LOW)
         print ("pump off")
-        time.sleep(18000)
-else:
-    time.sleep(7200)
+        time.sleep(2000)
+    else:
+        print('rest')
+        time.sleep(2000)
+
+    
+
+
