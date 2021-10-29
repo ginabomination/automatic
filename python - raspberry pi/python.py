@@ -44,6 +44,7 @@ while count <= 10:
     if b > 4:
         print ("pump off")
     else:
+        time.sleep(2000)
         print('rest')
     
 
