@@ -43,10 +43,8 @@ b = 3
 while count <= 10:
     if b > 4:
         print ("pump off")
-        time.sleep(2000)
     else:
         print('rest')
-        time.sleep(200)
     
 
 
