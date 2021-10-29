@@ -42,5 +42,5 @@ while count <= 10:
         print ("pump off")
     else:
         print('rest')
-
-
+        time.sleep(2)
+        print('looping')
