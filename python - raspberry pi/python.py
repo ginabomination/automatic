@@ -38,12 +38,10 @@ print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
 
 count = 0
 
+b = 3
+
 while count <= 10:
-    if chan.voltage > soilF:
-        GPIO.output(ledpin, GPIO.HIGH)
-        print ("pump on")
-        time.sleep(pump)
-        GPIO.output(ledpin, GPIO.LOW)
+    if b > 2:
         print ("pump off")
         time.sleep(2000)
     else:
