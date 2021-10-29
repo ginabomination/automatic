@@ -41,7 +41,7 @@ count = 0
 b = 3
 
 while count <= 10:
-    if b > 2:
+    if b > 4:
         print ("pump off")
         time.sleep(2000)
     else:
