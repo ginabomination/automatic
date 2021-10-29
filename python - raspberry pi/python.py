@@ -33,12 +33,14 @@ soilF = float(soil)
 
 count = 0
 
-b = 3
-
-print('rest2')
-time.sleep(20)
-print('rest')
-
-
+while count <= 10:
+    if chan.voltage > soilF:
+        GPIO.output(ledpin, GPIO.HIGH)
+        print ("pump on")
+        time.sleep(pump)
+        GPIO.output(ledpin, GPIO.LOW)
+        print ("pump off")
+    else:
+        print('rest')
 
 
