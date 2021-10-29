@@ -22,7 +22,7 @@ GPIO.setup(ledpin, GPIO.OUT)
 GPIO.setwarnings(False)
 
 count = 0
-b = 5
+
 while count <= 10:   
     for PlaceholderPump in col.find():
         pump = (PlaceholderPump['pump'])
@@ -32,15 +32,13 @@ while count <= 10:
         soil = (PlaceholderPump['soil'])
         print ('soil acquired =', soil)
     
-    time.sleep(10)
-    
     soilF = float(soil)
     print ('soil as float =', soilF)
     
     pumpI = int(pump)
     print ('pump as integer =', pumpI)
     
-    if chan.voltage > soilF:
+    if chan.voltage < soilF:
         GPIO.output(ledpin, GPIO.HIGH)
         print ("pump on")
         time.sleep(pumpI)
@@ -49,5 +47,4 @@ while count <= 10:
         
     else:
         print('rest')
-        time.sleep(10)
         print('looping')
