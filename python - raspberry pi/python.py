@@ -21,17 +21,19 @@ print ("pin setup")
 GPIO.setup(ledpin, GPIO.OUT)
 GPIO.setwarnings(False)
 
-for PlaceholderPump in col.find():
-    pump = (PlaceholderPump['pump'])
-    print ('pump acquired =', pump)
-    
-for PlaceholderSoil in col.find():
-    soil = (PlaceholderPump['soil'])
-    print ('soil acquired =', soil)
-
-soilF = float(soil)
-
 count = 0
+
+while count <= 10:   
+    for PlaceholderPump in col.find():
+        pump = (PlaceholderPump['pump'])
+        print ('pump acquired =', pump)
+        
+    for PlaceholderSoil in col.find():
+        soil = (PlaceholderPump['soil'])
+        print ('soil acquired =', soil)
+        
+    soilF = float(soil)
+
 
 while count <= 10:
     if chan.voltage > soilF:
