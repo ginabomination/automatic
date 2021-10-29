@@ -23,29 +23,22 @@ GPIO.setwarnings(False)
 
 for PlaceholderPump in col.find():
     pump = (PlaceholderPump['pump'])
-    print (pump)
+    print ('pump acquired =', pump)
     
 for PlaceholderSoil in col.find():
     soil = (PlaceholderPump['soil'])
-    print (soil)
+    print ('soil acquired =', soil)
 
 soilF = float(soil)
-print ('Soil =', soilF)
-
-print ("{:>5}\t{:>5}".format ("raw", "v"))
-
-print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
 
 count = 0
 
 b = 3
 
-while count <= 10:
-    if b > 4:
-        print ("pump off")
-    else:
-        time.sleep(2000)
-        print('rest')
-    
+print('rest2')
+time.sleep(20)
+print('rest')
+
+
 
 
