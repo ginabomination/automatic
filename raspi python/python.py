@@ -16,10 +16,10 @@ col = db["Moisture"] # connectining to the collection
 i2c = busio.I2C(board.SCL, board.SDA) # connecting to i2c
 ads = ADS.ADS1015(i2c)
 chan = AnalogIn(ads, ADS.P0) # soil moisture readings
-ledpin = 24 # pin used to control pump
+pin = 23 # pin used to control pump
 
 print ("pin setup")
-GPIO.setup(ledpin, GPIO.OUT)
+GPIO.setup(pin, GPIO.OUT)
 GPIO.setwarnings(False)
 
 count = 0
@@ -46,10 +46,10 @@ while count <= 10:
     # turning str to int
     
     if chan.voltage < soilF: # if soil moisture voltage reading is less than soil value
-        GPIO.output(ledpin, GPIO.HIGH) # gpio voltage on
+        GPIO.output(pin, GPIO.HIGH) # gpio voltage on
         print ("pump on")
         time.sleep(pumpI) # time pump is on, corresponding with pump value
-        GPIO.output(ledpin, GPIO.LOW) # gpio voltage off
+        GPIO.output(pin, GPIO.LOW) # gpio voltage off
         print ("pump off")
         time.sleep(16200) # 4.5 hrs wait period till next soil moisture check
         print('looping')
