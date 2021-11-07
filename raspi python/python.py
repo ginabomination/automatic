@@ -6,7 +6,9 @@ import busio
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn # importing soil moisture sensor
 
-client = pymongo.MongoClient('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test') # connecting to the database
+client = pymongo.MongoClient('mongodb+srv://ginags:2tripleX@database.bt4bd.mongodb.net/test') 
+# connecting to the database by url
+
 dblist = client.list_database_names()
 db = client["Sustain"] # connecting to the cluster
 collist = db.list_collection_names()
@@ -25,7 +27,7 @@ GPIO.setwarnings(False)
 count = 0
 
 while count <= 10:   
-    for PlaceholderPump in col.find():
+    for pump in col.find():
         pump = (PlaceholderPump['pump'])
         print ('pump acquired =', pump)
         # isolating pump value 
@@ -34,9 +36,7 @@ while count <= 10:
         soil = (PlaceholderPump['soil'])
         print ('soil acquired =', soil)
          # isolating soil value
-    
-    time.sleep(1800) # 30 min allows a wait period between submitting data to allow for the user to make changes encase mistakes have occured
-    
+
     soilF = float(soil)
     print ('soil as float =', soilF)
     # turning str to float
@@ -51,10 +51,12 @@ while count <= 10:
         time.sleep(pumpI) # time pump is on, corresponding with pump value
         GPIO.output(pin, GPIO.LOW) # gpio voltage off
         print ("pump off")
-        time.sleep(16200) # 4.5 hrs wait period till next soil moisture check
+        time.sleep(18000) # 5 hrs wait period till next soil moisture check
         print('looping')
         
     else:
         print('rest')
-        time.sleep(16200) # 4.5 hrs wait period till next soil moisture check
+        time.sleep(18000) # 5 hrs wait period till next soil moisture check
         print('looping')
+
+
